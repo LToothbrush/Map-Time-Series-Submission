@@ -103,13 +103,17 @@ for i, name in enumerate(labels):
     start = match_indices[i]
     end = start + window_size
     plt.plot(common_angles[start:end], s[start:end], color="black", linewidth=3)
-plt.title("Cambridge Time Series Graphs with Selected Shapelet")
+plt.title("Cambridge Time Series Graphs with Selected Shapelet", fontweight = "bold")
+plt.xlabel("Angle", fontweight = "bold")
+plt.ylabel("Distance", fontweight = "bold")
 plt.legend()
 plt.show()
 
 plt.figure()
 plt.plot(shapelet, color="purple")
-plt.title("Selected Shapelet")
+plt.title("Selected Shapelet", fontweight = "bold")
+plt.xlabel("Angle", fontweight = "bold")
+plt.ylabel("Distance", fontweight = "bold")
 plt.show()
 
 all_labels = ["1574", "1798", "1950", "2026", "Harvard", "Amsterdam"]
@@ -144,7 +148,9 @@ plt.figure(figsize=(10, 4))
 plt.bar(plot3_labels, plot3_sim, color=plot3_colors)
 plt.ylim(-1, 1)
 plt.axhline(0, color="black", linewidth=0.8)
-plt.title("Similarity Score to Historical Maps")
+plt.title("Similarity Score to Historical Maps",fontweight = "bold")
+plt.xlabel("Location", fontweight = "bold")
+plt.ylabel("Similarity Score", fontweight = "bold")
 plt.show()
 
 plot4_labels = ["2026", "Harvard", "Amsterdam"]
@@ -157,5 +163,7 @@ plt.figure(figsize=(10, 4))
 plt.bar(plot4_display_labels, plot4_sim, color=plot4_colors)
 plt.ylim(-1, 1)
 plt.axhline(0, color="black", linewidth=0.8)
-plt.title("Similarity Score to Other Maps")
+plt.title("Similarity Score to Other Maps", fontweight = "bold")
+plt.xlabel("Location", fontweight = "bold")
+plt.ylabel("Similarity Score", fontweight = "bold")
 plt.show()
